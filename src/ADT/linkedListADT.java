@@ -1,4 +1,4 @@
-import java.util.*;
+package ADT;
 public class linkedListADT {
     public static class Node {
         int val;
@@ -38,17 +38,5 @@ public class linkedListADT {
             System.out.print(temp.val+" ");
             temp=temp.next;
         }
-    }
-    public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        System.out.print("Enter number of nodes:");
-        int num=sc.nextInt();
-        for(int i=1;i<=num;i++)
-        {
-            System.out.print("Enter value for node "+i+":");
-            int val=sc.nextInt();
-            insertAtEnd(val);
-        }
-        traverse();
     }
 }
