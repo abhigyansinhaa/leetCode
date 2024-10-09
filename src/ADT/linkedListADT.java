@@ -30,6 +30,40 @@ public class linkedListADT {
         temp.next=head;
         head=temp;
     }
+    static void insertAtPos(int val,int pos)
+    {
+        Node temp=head;
+        for(int i=1;i<=pos;i++,temp=temp.next)
+        {
+            if(i==pos-1)
+            {
+                Node newNode=new Node();
+                newNode.val=val;
+                newNode.next=temp.next;
+                temp.next=newNode;
+            }
+        }
+    }
+    Node deleteAtPos(int pos)
+    {
+        Node temp=head;
+        for(int i=1;i<=pos-2;i++,temp=temp.next)
+        {
+            /*if(i==pos-1) {
+                Node tempStore = temp.next;
+                temp.next = tempStore.next;
+                return temp;
+            }*/
+        }
+        Node tempStore = temp.next;
+        temp.next = tempStore.next;
+        return temp;
+    }
+    void deleteAtHead()
+    {
+        Node temp=head;
+        head=head.next;
+    }
     static void traverse()
     {
         Node temp=head;

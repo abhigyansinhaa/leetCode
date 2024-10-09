@@ -31,5 +31,10 @@ public class stacksADT {
      {
          return head.val;
      }
+     Node drain(Node head){
+         if(head.next==null)
+             return head;
+         return drain(head.next);
+     }
 }
 
