@@ -47,14 +47,14 @@ public class linkedListADT {
     Node deleteAtPos(int pos)
     {
         Node temp=head;
-        for(int i=1;i<=pos-2;i++,temp=temp.next)
-        {
-            /*if(i==pos-1) {
+        for(int i=1;i<=pos-2;i++,temp=temp.next);
+        /*{
+            *//*if(i==pos-1) {
                 Node tempStore = temp.next;
                 temp.next = tempStore.next;
                 return temp;
-            }*/
-        }
+            }*//*
+        }*/
         Node tempStore = temp.next;
         temp.next = tempStore.next;
         return temp;
